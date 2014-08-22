@@ -51,10 +51,38 @@ header #title {
 	top: 3px;
 }
 
+
+/* Fix for misaligned grade columns */
 .path-grade-report-grader table#fixed_column {
 	margin-top: 0px;
 }
 
+/* Always display horizontal scrollbars for the gradebook */
+#page-content div.gradeparent .right_scroller::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 11px;
+   width:10px;
+}
+
+#page-content div.gradeparent .right_scroller::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+
+
+/* Responsive design tweaks for grader report and blocks */
+
+@media (min-width: 960px) and (max-width: 1200px) {
+	.path-grade #block-region-side-pre {
+		width: 23.404255319148934%;
+	}
+}
+
+
+
+/* Responsive design tweaks for header */
 @media (min-width: 768px) and (max-width: 979px) {
 	header #title {
     	font-size:2em;
@@ -63,6 +91,7 @@ header #title {
     	font-size:3em;
 	}
 }
+
 
 @media (max-width: 767px) { 
    	header #title {

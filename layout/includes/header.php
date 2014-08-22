@@ -55,8 +55,8 @@
         <!-- HEADER: LOGO AREA -->
             <div class="<?php echo $logoclass; echo (!$left) ? ' pull-right': '';?>">
                 <?php if (!$haslogo) { ?>
-                    <i id="headerlogo" class="fa fa-<?php echo $PAGE->theme->settings->siteicon ?>"></i>
-                        <h1 id="title"><?php echo $SITE->shortname; ?></h1>
+                    <i id="headerlogo" class="swaticon <?php echo $PAGE->theme->settings->siteicon ?>"></i>
+                    <h1 id="title"><?php echo $COURSE->fullname; ?></h1>
                 <?php } else { ?>
                     <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"></a>
                 <?php } ?>
@@ -76,22 +76,41 @@
             if ($hassocialnetworks) {
             ?>
             <div class="span4<?php echo ($left) ? ' pull-right': '';?>" id="socialnetworks">
-            <p id="socialheading"><?php echo get_string('socialnetworks','theme_essential')?></p>
-                <ul class="socials unstyled">
-                    <?php
-                        echo $OUTPUT->render_social_network('googleplus');
-                        echo $OUTPUT->render_social_network('twitter');
-                        echo $OUTPUT->render_social_network('facebook');
-                        echo $OUTPUT->render_social_network('linkedin');
-                        echo $OUTPUT->render_social_network('youtube');
-                        echo $OUTPUT->render_social_network('flickr');
-                        echo $OUTPUT->render_social_network('pinterest');
-                        echo $OUTPUT->render_social_network('instagram');
-                        echo $OUTPUT->render_social_network('vk');
-                        echo $OUTPUT->render_social_network('skype');
-                        echo $OUTPUT->render_social_network('website');
-                    ?>
-                </ul>
+            
+            	<!-- Moodle help link -->
+				<div class="help_div">
+					<p>Help</p>
+					<ul class="socials unstyled">
+						<li>
+							<button class="socialicon moohelp">
+								<a href="https://kb.swarthmore.edu:8443/display/MOODLE/Moodle+Home" title="Moodle Help" target="_blank">
+									<i class="fa fa-question fa-inverse"></i>
+									<span class="sr-only">https://kb.swarthmore.edu:8443/display/MOODLE/Moodle+Home</span>
+								</a>
+							</button>
+						</li>
+					</ul>
+                </div>    
+        
+            	<div class="social_div">            
+					<p id="socialheading"><?php echo get_string('socialnetworks','theme_essential')?></p>
+					<ul class="socials unstyled">
+						<?php
+							echo $OUTPUT->render_social_network('googleplus');
+							echo $OUTPUT->render_social_network('twitter');
+							echo $OUTPUT->render_social_network('facebook');
+							echo $OUTPUT->render_social_network('linkedin');
+							echo $OUTPUT->render_social_network('youtube');
+							echo $OUTPUT->render_social_network('flickr');
+							echo $OUTPUT->render_social_network('pinterest');
+							echo $OUTPUT->render_social_network('instagram');
+							echo $OUTPUT->render_social_network('vk');
+							echo $OUTPUT->render_social_network('skype');
+							echo $OUTPUT->render_social_network('website');
+						?>
+					</ul>
+				</div>
+      
             </div>
             <?php 
             }

@@ -1,0 +1,83 @@
+.block_course_overview div.coursebox {
+    padding: 5px 0px 0px 0px;
+    border: 0;
+    margin: 0px;
+}
+
+div.course_title h2.title {
+    font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+   margin: 0px;
+}
+
+.block_course_overview div.coursebox .activity_info {
+    display:none;
+}
+
+.btn-xl {
+    padding: 18px 28px;
+    font-size: 22px;
+    border-radius: 8px;
+}
+
+
+.social_div {
+	float: right;
+	border-right: 1px solid rgb(225, 225, 225);
+	padding-right: 15px;
+	height: 75px;
+}
+
+.help_div p {
+	text-align: right;
+	letter-spacing: 0.2em;
+	padding: 0px;
+	margin: 8px 0px 0px;
+}
+
+.help_div {
+	float: right;
+	padding-left:5px;
+	padding-right: 5px;
+}
+
+header #title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: no-wrap;
+	clear:none;
+	line-height: normal;
+	top: 3px;
+}
+
+.path-grade-report-grader table#fixed_column {
+	margin-top: 0px;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+	header #title {
+    	font-size:2em;
+   	}
+  	#headerlogo {
+    	font-size:3em;
+	}
+}
+
+@media (max-width: 767px) { 
+   	header #title {
+    	font-size:1.8em;
+    	text-overflow: initial;
+    	white-space: normal;
+   }
+  	#headerlogo {
+    	font-size:2.8em;
+	}   
+}
+
+@media (max-width: 480px) {    
+   header #title {
+		text-overflow: initial;
+    	white-space: normal;
+   }
+ }

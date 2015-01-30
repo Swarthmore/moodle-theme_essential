@@ -23,7 +23,7 @@
  * @copyright   2014 Gareth J Barnard, David Bezemer
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
- 
+
 ?>
 <!--[if lt IE 9]>
 <?php echo get_string('ie8message', 'theme_essential'); ?>
@@ -76,23 +76,20 @@
             if ($hassocialnetworks) {
             ?>
             <div class="span4<?php echo ($left) ? ' pull-right': '';?>" id="socialnetworks">
-            
+
             	<!-- Moodle help link -->
 				<div class="help_div">
 					<p>Help</p>
 					<ul class="socials unstyled">
 						<li>
-							<button class="socialicon moohelp">
-								<a href="https://kb.swarthmore.edu:8443/display/MOODLE/Moodle+Home" title="Moodle Help" target="_blank">
-									<i class="fa fa-question fa-inverse"></i>
-									<span class="sr-only">https://kb.swarthmore.edu:8443/display/MOODLE/Moodle+Home</span>
-								</a>
-							</button>
+              <button class="socialicon moohelp" onclick="window.open('https://kb.swarthmore.edu:8443/display/MOODLE/Moodle+Home')"><i class="fa fa-question fa-inverse"></i>
+                <span class="sr-only">Moodle Help</span>
+              </button>
 						</li>
 					</ul>
-                </div>    
-        
-            	<div class="social_div">            
+                </div>
+
+            	<div class="social_div">
 					<p id="socialheading"><?php echo get_string('socialnetworks','theme_essential')?></p>
 					<ul class="socials unstyled">
 						<?php
@@ -110,9 +107,9 @@
 						?>
 					</ul>
 				</div>
-      
+
             </div>
-            <?php 
+            <?php
             }
             // If true, displays the heading and available social links; displays nothing if false.
             if ($hasmobileapps) {
@@ -120,13 +117,13 @@
             <div class="span2<?php echo ($left) ? ' pull-right': '';?>">
                 <p id="socialheading"><?php echo get_string('mobileappsheading','theme_essential')?></p>
                 <ul class="socials unstyled">
-                    <?php 
+                    <?php
                         echo $OUTPUT->render_social_network('ios');
                         echo $OUTPUT->render_social_network('android');
                     ?>
                 </ul>
             </div>
-            <?php 
+            <?php
             }
             if (!empty($courseheader)) { ?>
             <div id="course-header"><?php echo $courseheader; ?></div>
